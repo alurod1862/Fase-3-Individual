@@ -1,80 +1,73 @@
-#
-#Funciones en la cabcera del script
-#
-
-function Show-Menu
+#----------------Funcion Submenu  -------------#
+function mostrar_Submenu
 {
      param (
-           [string]$Titulo = 'Menú principal'
+           [string]$Titulo = 'Submenu.....'
      )
-     Clear-Host
+     Clear-Host 
      Write-Host "================ $Titulo ================"
     
-     Write-Host "1: Opción '1' Acción 1."
-     Write-Host "2: Opción '2' Acción 2."
-     Write-Host "3: Opción '3' Acción 3."
-     Write-Host "Q: Opción 'Q' Salir."
-}
-#
-# Antes de insertar un objeto en AD, hay que comprobar que NO existe
-#
-
-#Primero comprobaremos si se tiene cargado el módulo Active Directory
-if (!(Get-Module -Name ActiveDirectory)) #Accederá al then solo si no existe una entrada llamada ActiveDirectory
-{
-  Import-Module ActiveDirectory #Se carga el módulo
-}
-
-#Cada vez que se inserta un objeto en AD, primero hay que comprobar que no existe
-#Comprobar si existe un objeto UO en el Controlador del Dominio
-$UO=UnidadOrganizativa
-if ( !(Get-ADOrganizationalUnit -Filter{ name -eq $UO })) #Devuelve false cuando ya existe la unidad organizativa $UO, y true cuando no existe.
-{
-}
-
-#Para Grupos
-$GRP=Grupo1
-if ( !(Get-ADGroup -Filter { name -eq $GRP })) #Devuelve false cuando ya existe el grupo $GRP, y true cuando no existe.
-{
-}
-
-#Para usuarios
-$usu=JC
-if ( !!(Get-ADUser -filter { name -eq $usu }) ) #Devuelve false cuando ya existe el grupo $usu, y true cuando no existe.
-{
-}
-#Para equipos
-$computer=W7-001
-if ( !!(Get-ADComputer -filter { name -eq $computer }) ) #Devuelve false cuando ya existe el ordenador $computer, y true cuando no existe.
-{
-}
-#
-# Fin comprobación de objetos
-#
-
-#
-#MENU PRINCIPAL
-#
+     Write-Host "1: Opción 1."
+     Write-Host "2: Opción 2."
+     Write-Host "s: Volver al menu principal."
 do
 {
-     Show-Menu
-     $input = Read-Host "Por favor, pulse una opción"
+     $input = Read-Host "Por favor, pulse una opcion"
      switch ($input)
      {
            '1' {
-                Clear-Host
-                #llamar a la función que haga la acción 1
-           } '2' {
-                Clear-Host
-                #llamar a la función que haga la acción 2
-           } '3' {
-                Clear-Host
-                #llamar a la función que haga la acción 2
-           } 'q' {
-                'Salimos de la App'
+                'Opcion 1'
                 return
-           }
+           } '2' {
+                'Opcion 2'
+                return
+           } 
      }
-     pause
 }
 until ($input -eq 'q')
+}
+
+
+
+#Función que nos muestra un menú por pantalla con 3 opciones, donde una de ellas es para acceder
+# a un submenú) y una última para salir del mismo.
+
+function mostrarMenu 
+{ 
+     param ( 
+           [string]$Titulo = 'Selección de opciones' 
+     ) 
+     Clear-Host 
+     Write-Host "================ $Titulo================" 
+      
+     
+     Write-Host "1. Primera Opción" 
+     Write-Host "2. Segunda Opción" 
+     Write-Host "3. Submneu" 
+     Write-Host "s. Presiona 's' para salir" 
+}
+
+do 
+{ 
+     mostrarMenu 
+     $input = Read-Host "Elegir una Opción" 
+     switch ($input) 
+     { 
+           '1' { 
+                Clear-Host  
+                'Primera Opción' 
+                pause
+           } '2' { 
+                Clear-Host  
+                'Segunda Opción' 
+                pause
+           } '3' {  
+                mostrar_Submenu      
+           } 's' {
+                'Saliendo del script...'
+                return 
+           }  
+     } 
+     pause 
+} 
+until ($input -eq 's')
