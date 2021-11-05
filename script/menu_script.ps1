@@ -94,7 +94,7 @@ $name=Read-Host "Escribe el nombre de la uo a crear"
     New-ADOrganizationalUnit -Name:$name -Path:"OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es" -ProtectedFromAccidentalDeletion:$false
 }
 
-function mostrar_Submenu2
+function mostrar_Submenu-2
 {
      param (
            [string]$Titulo = 'Submenu de Altas'
@@ -154,7 +154,7 @@ do
      {
            '1' {
                 Clear-Host
-                mostrar_Submenu2
+                mostrar_Submenu-2
                 return
            } 's' {
                 "Saliendo del submenu..."
