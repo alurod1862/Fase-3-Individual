@@ -1,0 +1,7 @@
+﻿Name:Descripcion:Path
+Clientes-Gandia:Organizacion-Gandia:DC=gandia,DC=upv,DC=es
+RRHH:Departamento de Recursos Humanos:OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es
+Informatica:Departamento de Informatica:OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es
+Investigacion y desarollo:Departamento de investigacion y desarollo:OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es
+Prensa:Departamento de prensa:OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es
+Comunicaciones:Departamento de Comunicaciones:OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es

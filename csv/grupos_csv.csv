@@ -1,0 +1,6 @@
+﻿id:Name:Path:Description:Category:Scope
+:Gandia_GG_Prensa_Usuarios:OU=Prensa,OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es:Grupo Global de  prensa usuarios:Security:Global
+:Gandia_GG_Informatica_Usuarios:OU=Informatica,OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es:Grupo Global de  informatica usuarios:Security:Global
+:Gandia_GG_Investigacion y desarollo_Usuarios:OU=Investigacion y desarollo,OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es:Grupo Global de  investigacion y desarollo usuarios:Security:Global
+:Gandia_GG_RRHH_Usuarios:OU=RRHH,OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es:Grupo Global de  recursos humanos usuarios:Security:Global
+:Gandia_GG_Comunicaciones_Usuarios:OU=Comunicaciones,OU=Clientes-Gandia,DC=gandia,DC=upv,DC=es:Grupo Global de  Comunicaciones usuarios:Distribution:Global

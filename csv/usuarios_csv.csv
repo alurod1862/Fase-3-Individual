@@ -1,0 +1,5 @@
+Name:Surname:Surname1:Surname2:account:Dni:Delegation:Departament:Enabled:Password:TurnPassDays:email:Change:Path
+LUIS:NAVARRO RUIZ:NAVARRO:RUIZ:LNAVARROR:12345678-A:gandia.upv.es:Informatica:TRUE:Zsxdcfv10*:15:LNAVARROR@gandia.upv.es:TRUE:UO=Informatica,UO=Clientes-Gandia,DC=gandia,DC=upv,DC=es
+SUSANA:ALABAU SANCHO:ALABAU:SANCHO:SALABAUS:12345679-B:gandia.upv.es:Informatica:TRUE:Zsxdcfv10*:15:SALABAUS@gandia.upv.es:TRUE:UO=Informatica,UO=Clientes-Gandia,DC=gandia,DC=upv,DC=es
+PEDRO:GOMIS ZAMBUJO:GOMIS:ZAMBUJO:PGOMISZ:12345680-C:gandia.upv.es:Informatica:TRUE:Zsxdcfv10*:15:PGOMISZ@gandia.upv.es:TRUE:UO=Informatica,UO=Clientes-Gandia,DC=gandia,DC=upv,DC=es
+
